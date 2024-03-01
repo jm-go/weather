@@ -1,0 +1,56 @@
+@use "src/assets/styles/variables" as *;
+
+.weathercard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.685);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+
+    &__location {
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+        font-family: $font-body-secondary;
+    }
+
+    &__greeting {
+        font-size: 1rem;
+        font-family: $font-body-secondary;
+        margin: 1rem 0;
+    }
+
+    &__local-time {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        font-family: $font-body-secondary;
+    }
+
+    &__conditions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    &__temp {
+        font-size: 1rem;
+        font-family: $font-body-secondary;
+    }
+
+    &__condition {
+        font-size: 1rem;
+        font-family: $font-body-secondary;
+    }
+}
