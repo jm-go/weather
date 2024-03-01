@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./main.scss";
-import WeatherCard from "./components/WeatherCard";
+import WeatherCard from "./components/WeatherCard/WeatherCard";
 import { WeatherResponse } from "./types/WeatherResponse";
 
 const App = () => {
@@ -46,7 +46,7 @@ const App = () => {
       {weather ? (
         <WeatherCard data={weather} />
       ) : (
-        <p className= "app-container__loading">Loading weather data...</p>
+        <p className="app-container__loading">Loading weather data...</p>
       )}
     </div>
   );
