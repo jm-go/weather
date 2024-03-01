@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&family=Playpen+Sans&family=Questrial&family=Roboto:wght@300&family=Shadows+Into+Light&display=swap');
+
+/* Fonts */
+$font-body: "Lato", sans-serif;
+$font-body-secondary: "Montserrat", sans-serif;
+$font-headers: "Shadows Into Light", sans-serif;
+$font-headers-secondary: "Bebas Neue", sans-serif;
+
+/* Colour palette */
+$color-grey: #A9A9A9;
+$color-white: #FFFFFF;
+$pastel-blue: #A1E7FB;
+$pastel-green: #B4ECB4;
+$color-beige: #CCC;
+$color-black: #000000;
+$color-grey: #E2E2E2;
+
+/* Breakpoints for media queries */
+$breakpoint-mobile: 320px;
+$breakpoint-mobile-large: 425px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1024px;
+$breakpoint-desktop: 1440px;
+$breakpoint-large-desktop: 2560px;

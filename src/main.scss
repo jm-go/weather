@@ -1,0 +1,44 @@
+@use "src/assets/styles/variables" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $font-body;
+}
+
+body {
+    background-color: $color-grey;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 16px;
+}
+
+@media screen and (min-width: $breakpoint-tablet) {
+
+    html {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: $breakpoint-laptop) {
+
+    html {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: $breakpoint-desktop) {
+
+    html {
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: $breakpoint-large-desktop) {
+
+    html {
+        font-size: 42px;
+    }
+}
