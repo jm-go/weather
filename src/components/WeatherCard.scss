@@ -54,3 +54,14 @@
         font-family: $font-body-secondary;
     }
 }
+
+.app-container {
+    display: flex;
+    justify-content: center;
+
+    &__loading {
+        margin-top: 7rem;
+        font-size: 0.7rem;
+        font-family: $font-body-secondary;
+    }
+}

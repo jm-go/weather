@@ -6,11 +6,35 @@ type WeatherCardProps = {
 };
 
 const WeatherCard = ({ data }: WeatherCardProps) => {
+  // Function to determine the greeting based on the hour of the day
   const getGreeting = () => {
     const hour = new Date(data.location.localtime).getHours();
     if (hour < 12) return "Good Morning!";
     if (hour < 18) return "Good Afternoon!";
     return "Good Evening!";
+  };
+
+  // Function to format the local time
+  const getFormattedTime = () => {
+    const timeOptions: Intl.DateTimeFormatOptions = {
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+    };
+    return new Intl.DateTimeFormat("en-GB", timeOptions).format(new Date());
+  };
+
+  // Function to format the date
+  const getFormattedDate = () => {
+    const dateOptions: Intl.DateTimeFormatOptions = {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    };
+    return new Intl.DateTimeFormat("en-GB", dateOptions).format(
+      new Date(data.location.localtime)
+    );
   };
 
   return (
@@ -19,7 +43,8 @@ const WeatherCard = ({ data }: WeatherCardProps) => {
       <h1 className="weathercard__location">
         {data.location.name}, {data.location.country}
       </h1>
-      <p className="weathercard__local-time">{data.location.localtime}</p>
+      <p className="weathercard__local-time">{getFormattedTime()}</p>
+      <p className="weathercard__local-date">{getFormattedDate()}</p>
       <div className="weathercard__conditions">
         <img
           src={`https:${data.current.condition.icon}`}

@@ -46,7 +46,7 @@ const App = () => {
       {weather ? (
         <WeatherCard data={weather} />
       ) : (
-        <p>Loading weather data...</p>
+        <p className= "app-container__loading">Loading weather data...</p>
       )}
     </div>
   );
