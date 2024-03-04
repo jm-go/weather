@@ -10,6 +10,7 @@ The Weather and Tasks App is a React-based application that enhances daily produ
 - **Weather Data**: Displays the weather information including temperature, conditions, and more, using the Weather API.
 - **Dynamic Greeting**: Offers a greeting message that changes based on the time of the day.
 - **Task Management**: Allows users to add, mark as complete, and delete daily tasks.
+<br>
 
 <p align="center">
   <img src="src/assets/images/app.png" alt="App Interface" width="500"><br>
