@@ -1,38 +1,37 @@
-## Overview - Frontend Project Spec
+# Weather and Daily Task App
 
-### Goals
+## Overview
 
-- Using the users location to customise their experience is a very common skill required in a lot of different contexts, this is your chance to get familiar with it!
+The Weather and Tasks App is a React-based application that enhances daily productivity by providing weather updates based on the user's location along with a simple to-do list to manage daily tasks.
 
-### Specifications
+### Features
 
-**Stage 1**
+- **Geolocation**: Automatically fetches the user's current location to provide localised weather data.
+- **Weather Data**: Displays the weather information including temperature, conditions, and more, using the Weather API.
+- **Dynamic Greeting**: Offers a greeting message that changes based on the time of the day.
+- **Task Management**: Allows users to add, mark as complete, and delete daily tasks.
+<br>
 
-- Create a React application that when run, uses the users browser location to pinpoint their position.
-- This data (coordinates) will then be def into this api to get the weather data for their
-  specific location
-- https://www.weatherapi.com/api-explorer.aspx
-- You will need to make an account to get an API key (this api key should be stored
-  in environment variables before committing/pushing to GitHub
-- The data that comes back from the weather api will then be displayed to the user on the
-  screen, alongside a greeting message that changes depending on the time of the day.
+<p align="center">
+  <img src="src/assets/images/app.png" alt="App Interface" width="500"><br>
+</p>
 
-**Stage 2**
+### Technologies
 
-- This is where you get creative
-- This project could turn into a little helper for the user in the morning that shows them things like...
-- Weather in their area (done in stage 1)
-- How long it will take them to get to work (Google maps api variant)
-- A todo list for the day
-- Local news
-- Any other cool features you can think of that demonstrate your React capabilities!
+- React.js
+- SCSS with BEM notation
+- WeatherAPI
+- Vite
+- Browser Geolocation API
 
-**Stage 3**
+## Setup and Installation
 
-- Once finished, ensure the latest code is pushed to github and deployed (via gh pages, firebase, GCP or other)
-  Place particular importance on your coding standards here…
-- Readable SCSS (BEM!)
-- Container/Component architecture
-- Good, descriptive, meaningfu commit messages
-- Well sized components
-- As well as focussing on the UI, take inspiration from dribbble or elsewhere to ensure it looks amazing, as well as works as intended!
+- Clone the repository.
+- Install dependencies: npm install.
+- Start the application: npm run dev.
+
+Alternatively, view the live version deployed on GitHub Pages at [View Live Weather App](https://jm-go.github.io/weather/).
+
+## Contact
+
+For any additional questions or comments, feel free to reach out to me directly through the contact information provided on the website.

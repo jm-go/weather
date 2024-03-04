@@ -1,0 +1,48 @@
+@use "../../assets/styles/variables" as *;
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3rem;
+    margin-bottom: 0.3rem;
+    width: 100%;
+    margin-right: 1rem;
+    background: rgba(255, 255, 255, 0.435);
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    &__checkbox {
+        margin-right: 0.5rem;
+    }
+
+    &__text {
+        flex-grow: 1;
+        font-size: 0.55rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-all;
+        white-space: normal;
+
+        &--completed {
+            text-decoration: line-through;
+        }
+    }
+
+    &__delete {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-left: 0.5rem;
+
+        &--icon {
+            width: 0.7rem;
+            height: 0.7rem;
+            color: $color-dark-grey;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
