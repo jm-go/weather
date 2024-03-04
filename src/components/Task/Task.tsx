@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { Trash2 } from "lucide-react";
-import "./Item.scss";
+import "./Task.scss";
 
-type ItemProps = {
+type TaskProps = {
   task: string;
   onDelete: () => void;
 };
 
-
-const Item = ({ task, onDelete }: ItemProps) => {
+const Task = ({ task, onDelete }: TaskProps) => {
   const [isCompleted, setIsCompleted] = useState<boolean>(false);
 
   const handleCheckboxChange = () => {
@@ -16,23 +15,23 @@ const Item = ({ task, onDelete }: ItemProps) => {
   };
 
   return (
-    <div className="item">
+    <div className="task">
       <input
         type="checkbox"
-        className="item__checkbox"
+        className="task__checkbox"
         checked={isCompleted}
         onChange={handleCheckboxChange}
       />
       <span
-        className={`item__text ${isCompleted ? "item__text--completed" : ""}`}
+        className={`task__text ${isCompleted ? "task__text--completed" : ""}`}
       >
         {task}
       </span>
-      <button className="item__delete" onClick={onDelete}>
-        <Trash2 className="item__delete--icon" />
+      <button className="task__delete" onClick={onDelete}>
+        <Trash2 className="task__delete--icon" />
       </button>
     </div>
   );
 };
 
-export default Item;
+export default Task;
