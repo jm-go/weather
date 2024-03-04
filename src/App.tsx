@@ -25,7 +25,7 @@ const App = () => {
   };
 
   const getWeather = async (latitude: number, longitude: number) => {
-    const key = "61b91645fd214069b01141243240103";
+    const key = import.meta.env.VITE_API_KEY;
     const url = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${latitude},${longitude}&aqi=no`;
 
     try {
