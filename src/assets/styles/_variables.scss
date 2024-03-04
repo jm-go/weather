@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Indie+Flower&family=Poppins:wght@300&family=Silkscreen&family=Unica+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato&family=Roboto:wght@300&family=Shadows+Into+Light&display=swap');
 
 /* Fonts */
 $font-body: "Poppins", sans-serif;
 $font-headers: "Indie Flower", sans-serif;
 $font-headers-secondary: "Lobster", sans-serif;
+$font-body-alt: "Lato", sans-serif;
+$font-body-alt-secondary: "Roboto", sans-serif;
 
 /* Colour palette */
 $color-grey: #A9A9A9;
+$color-dark-grey: #808080;
 $color-white: #FFFFFF;
 $pastel-blue: #A1E7FB;
 $color-blue: #add8e6;
@@ -15,6 +19,8 @@ $pastel-green: #B4ECB4;
 $color-beige: #CCC;
 $color-black: #000000;
 $color-grey: #E2E2E2;
+$light-violet: #B2B2FF;
+$light-lavender: #E5E5FF;
 
 /* Breakpoints for media queries */
 $breakpoint-mobile: 320px;
