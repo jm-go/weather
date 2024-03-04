@@ -26,7 +26,7 @@ const App = () => {
 
   const getWeather = async (latitude: number, longitude: number) => {
     const key = "61b91645fd214069b01141243240103";
-    const url = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${latitude},${longitude}&aqi=no`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${latitude},${longitude}&aqi=no`;
 
     try {
       const response = await fetch(url);
