@@ -7,8 +7,8 @@
 }
 
 body {
-    background-color: $color-grey;
-    overflow-x: hidden;
+    background: url('./assets/images/twilight.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 html {
