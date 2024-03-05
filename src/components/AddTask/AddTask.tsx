@@ -9,10 +9,19 @@ type AddTaskProps = {
 const AddTask = ({ onAdd }: AddTaskProps) => {
   const [userInput, setUserInput] = useState<string>("");
 
+  /**
+   * Handles changes to the input field and updates the userInput state.
+   *
+   * @param {ChangeEvent<HTMLInputElement>} event - The input change event.
+   */
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     setUserInput(event.target.value);
   };
 
+  /**
+   * Calls the onAdd prop function with the current userInput value
+   * if it's not empty, then clears the userInput state.
+   */
   const handleAdd = () => {
     if (userInput.trim() !== "") {
       onAdd(userInput);
