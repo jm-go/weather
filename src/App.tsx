@@ -4,26 +4,39 @@ import WeatherCard from "./components/WeatherCard/WeatherCard";
 import { WeatherResponse } from "./types/WeatherResponse";
 import TaskList from "./components/TaskList/TaskList";
 import AddTask from "./components/AddTask/AddTask";
-
-type Task = {
-  id: number;
-  content: string;
-};
+import Task from "./types/Task";
 
 const App = () => {
   const [weather, setWeather] = useState<WeatherResponse | null>(null);
   const [tasks, setTasks] = useState<Task[]>([]);
   const [taskId, setTaskId] = useState<number>(0);
 
+  /**
+   * Adds a new task with the given content to the tasks list.
+   *
+   * @param {string} taskContent - The content of the new task to be added.
+   */
   const handleAddTask = (taskContent: string) => {
     setTasks([...tasks, { id: taskId, content: taskContent }]);
     setTaskId(taskId + 1);
   };
 
+  /**
+   * Deletes a task based on its ID.
+   *
+   * @param {number} taskId - The ID of the task to be deleted.
+   */
   const handleDeleteTask = (taskId: number) => {
     setTasks(tasks.filter((task) => task.id !== taskId));
   };
 
+  /**
+   * Fetches the weather data for the specified latitude and longitude.
+   *
+   * @param {number} latitude - The latitude part of the location.
+   * @param {number} longitude - The longitude part of the location.
+   * @async
+   */
   const getWeather = async (latitude: number, longitude: number) => {
     const key = import.meta.env.VITE_API_KEY;
     const url = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${latitude},${longitude}&aqi=no`;
@@ -40,6 +53,9 @@ const App = () => {
     }
   };
 
+  /**
+   * Gets the user's current location and fetches the weather data for it.
+   */
   const getUserLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -55,6 +71,7 @@ const App = () => {
     }
   };
 
+  // Fetch the user's location and weather data on component mount.
   useEffect(() => {
     getUserLocation();
   }, []);
