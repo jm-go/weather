@@ -6,7 +6,13 @@ type WeatherCardProps = {
 };
 
 const WeatherCard = ({ data }: WeatherCardProps) => {
-  // Function to format the local time
+  
+  /**
+   * Formats the current local time as a user-friendly, readable string.
+   *
+   * @returns {string} The formatted time string in the format of "HH:MM AM/PM".
+   */
+
   const getFormattedTime = () => {
     const timeOptions: Intl.DateTimeFormatOptions = {
       hour: "numeric",
@@ -16,7 +22,11 @@ const WeatherCard = ({ data }: WeatherCardProps) => {
     return new Intl.DateTimeFormat("en-GB", timeOptions).format(new Date());
   };
 
-  // Function to format the date
+  /**
+   * Formats the local date from the weather data as a user-friendly, readable string.
+   *
+   * @returns {string} The formatted date string, e.g., "Monday, 1 January 2024".
+   */
   const getFormattedDate = () => {
     const dateOptions: Intl.DateTimeFormatOptions = {
       weekday: "long",
@@ -29,18 +39,21 @@ const WeatherCard = ({ data }: WeatherCardProps) => {
     );
   };
 
-    // Function to determine the greeting based on the hour of the day
-    const getGreeting = () => {
-      const hour = new Date(data.location.localtime).getHours();
-      if (hour < 12) return "Good Morning!";
-      if (hour < 18) return "Good Afternoon!";
-      return "Good Evening!";
-    };
-  
+  /**
+   * Determines the appropriate greeting based on the hour of the day.
+   *
+   * @returns {string} A greeting message based on the time of day ("Good Morning!", "Good Afternoon!", or "Good Evening!").
+   */
+  const getGreeting = () => {
+    const hour = new Date(data.location.localtime).getHours();
+    if (hour < 12) return "Good Morning!";
+    if (hour < 18) return "Good Afternoon!";
+    return "Good Evening!";
+  };
 
   return (
     <div className="weathercard">
-            <h1 className="weathercard__greeting">{getGreeting()}</h1>
+      <h1 className="weathercard__greeting">{getGreeting()}</h1>
       <h1 className="weathercard__location">
         {data.location.name}, {data.location.country}
       </h1>
